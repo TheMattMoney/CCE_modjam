@@ -17,7 +17,6 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import lime.app.Application;
-import Achievements;
 import editors.MasterEditorMenu;
 import flixel.input.keyboard.FlxKey;
 
@@ -114,24 +113,6 @@ class MainMenuState extends MusicBeatState
 			button.antialiasing = ClientPrefs.globalAntialiasing;
 			button.ID = i;
 			menuItems.add(button);
-
-			//var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			//var menuItem:FlxSprite = new FlxSprite(0, (i * 140)  + offset);
-			//menuItem.scale.x = scale;
-			//menuItem.scale.y = scale;
-			////menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
-			//menuItem.animation.addByPrefix('idle', optionShit[i] + " basic", 24);
-			//menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
-			//menuItem.animation.play('idle');
-			//menuItem.ID = i;
-			//menuItem.screenCenter(X);
-			//menuItems.add(menuItem);
-			//var scr:Float = (optionShit.length - 4) * 0.135;
-			//if(optionShit.length < 6) scr = 0;
-			//menuItem.scrollFactor.set(0, scr);
-			//menuItem.antialiasing = ClientPrefs.globalAntialiasing;
-			//menuItem.setGraphicSize(Std.int(menuItem.width * 0.58));
-			//menuItem.updateHitbox();
 		}
 
 		FlxG.camera.follow(camFollowPos, null, 1);
@@ -149,30 +130,8 @@ class MainMenuState extends MusicBeatState
 
 		changeItem();
 
-		#if ACHIEVEMENTS_ALLOWED
-		Achievements.loadAchievements();
-		var leDate = Date.now();
-		if (leDate.getDay() == 5 && leDate.getHours() >= 18) {
-			var achieveID:Int = Achievements.getAchievementIndex('friday_night_play');
-			if(!Achievements.isAchievementUnlocked(Achievements.achievementsStuff[achieveID][2])) { //It's a friday night. WEEEEEEEEEEEEEEEEEE
-				Achievements.achievementsMap.set(Achievements.achievementsStuff[achieveID][2], true);
-				giveAchievement();
-				ClientPrefs.saveSettings();
-			}
-		}
-		#end
-
 		super.create();
 	}
-
-	#if ACHIEVEMENTS_ALLOWED
-	// Unlocks "Freaky on a Friday Night" achievement
-	function giveAchievement() {
-		add(new AchievementObject('friday_night_play', camAchievement));
-		FlxG.sound.play(Paths.sound('confirmMenu'), 0.7);
-		trace('Giving achievement "friday_night_play"');
-	}
-	#end
 
 	var selectedSomethin:Bool = false;
 
@@ -252,8 +211,6 @@ class MainMenuState extends MusicBeatState
 									case 'mods':
 										MusicBeatState.switchState(new ModsMenuState());
 									#end
-									case 'awards':
-										MusicBeatState.switchState(new AchievementsMenuState());
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
 									case 'options':

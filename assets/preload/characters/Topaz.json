@@ -109,13 +109,13 @@
 	"healthicon": "topaz",
 	"flip_x": true,
 	"healthbar_colors": [
-		49,
-		176,
-		209
+		255,
+		204,
+		0
 	],
 	"camera_position": [
-		0,
-		0
+		-240,
+		-100
 	],
 	"sing_duration": 4,
 	"scale": 1
