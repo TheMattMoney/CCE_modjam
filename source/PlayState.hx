@@ -473,29 +473,31 @@ class PlayState extends MusicBeatState
 		switch (curStage)
 		{
 			case 'reflection': //CRYSTAL CAVERN ENCOUNTER MODJAM STAGE
-			trace("Adding custom background shit.");
-			colorback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('colors'));
-			colorback.antialiasing = ClientPrefs.globalAntialiasing;
-			caveback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('cave'));
-			caveback.antialiasing = ClientPrefs.globalAntialiasing;
-			topazback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('topazb'));
-			topazback.antialiasing = ClientPrefs.globalAntialiasing;
-			mimicback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('mimicb'));
-			mimicback.antialiasing = ClientPrefs.globalAntialiasing;
-			halfwayback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('halfb'));
-			halfwayback.antialiasing = ClientPrefs.globalAntialiasing;
+				trace("Adding custom background shit.");
+				colorback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('colors'));
+				colorback.antialiasing = ClientPrefs.globalAntialiasing;
+				caveback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('cave'));
+				caveback.antialiasing = ClientPrefs.globalAntialiasing;
+				topazback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('topazb'));
+				topazback.antialiasing = ClientPrefs.globalAntialiasing;
+				mimicback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('mimicb'));
+				mimicback.antialiasing = ClientPrefs.globalAntialiasing;
+				halfwayback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('halfb'));
+				halfwayback.antialiasing = ClientPrefs.globalAntialiasing;
 
-			colorback.setGraphicSize(Std.int(colorback.width / bgScaleFactor));
-			caveback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
-			topazback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
-			mimicback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
-			halfwayback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
+				colorback.setGraphicSize(Std.int(colorback.width / bgScaleFactor));
+				caveback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
+				topazback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
+				mimicback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
+				halfwayback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
 
-			add(colorback);
-			add(topazback);
-			add(halfwayback);
-			add(mimicback);
-			add(caveback);
+				add(colorback);
+				add(topazback);
+				add(halfwayback);
+				add(mimicback);
+				add(caveback);
+
+				addCharacterToList('gameoverCC', 0);
 
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
@@ -628,6 +630,11 @@ class PlayState extends MusicBeatState
 		{
 			camPos.x += gf.getGraphicMidpoint().x + gf.cameraPosition[0];
 			camPos.y += gf.getGraphicMidpoint().y + gf.cameraPosition[1];
+		}
+		else
+		{
+			camPos.x += dad.getGraphicMidpoint().x + dad.cameraPosition[0];
+			camPos.y += dad.getGraphicMidpoint().y + dad.cameraPosition[1];
 		}
 
 		if(dad.curCharacter.startsWith('gf')) {
