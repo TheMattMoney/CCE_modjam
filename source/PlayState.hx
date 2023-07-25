@@ -291,6 +291,16 @@ class PlayState extends MusicBeatState
 	// stores the last combo score objects in an array
 	public static var lastScore:Array<FlxSprite> = [];
 
+	//CUSTOM GLOBAL VARS FOR BACKGROUND
+	var colorback:FlxSprite;
+	var caveback:FlxSprite;
+	var topazback:FlxSprite;
+	var mimicback:FlxSprite;
+	var halfwayback:FlxSprite;
+	var bgX:Int = -450;
+	var bgY:Int = 50;
+	var bgScaleFactor:Float = 1.25;
+
 	override public function create()
 	{
 		//trace('Playback Rate: ' + playbackRate);
@@ -410,6 +420,9 @@ class PlayState extends MusicBeatState
 		}
 		SONG.stage = curStage;
 
+
+	
+
 		var stageData:StageFile = StageData.getStageFile(curStage);
 		if(stageData == null) { //Stage couldn't be found, create a dummy stage for preventing a crash
 			stageData = {
@@ -459,6 +472,31 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'reflection': //CRYSTAL CAVERN ENCOUNTER MODJAM STAGE
+			trace("Adding custom background shit.");
+			colorback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('colors'));
+			colorback.antialiasing = ClientPrefs.globalAntialiasing;
+			caveback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('cave'));
+			caveback.antialiasing = ClientPrefs.globalAntialiasing;
+			topazback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('topazb'));
+			topazback.antialiasing = ClientPrefs.globalAntialiasing;
+			mimicback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('mimicb'));
+			mimicback.antialiasing = ClientPrefs.globalAntialiasing;
+			halfwayback = new FlxSprite(bgX,bgY).loadGraphic(Paths.image('halfb'));
+			halfwayback.antialiasing = ClientPrefs.globalAntialiasing;
+
+			colorback.setGraphicSize(Std.int(colorback.width / bgScaleFactor));
+			caveback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
+			topazback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
+			mimicback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
+			halfwayback.setGraphicSize(Std.int(colorback.width /  bgScaleFactor));
+
+			add(colorback);
+			add(topazback);
+			add(halfwayback);
+			add(mimicback);
+			add(caveback);
+
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -2137,8 +2175,38 @@ class PlayState extends MusicBeatState
 	var canPause:Bool = true;
 	var limoSpeed:Float = 0;
 
+	var tweenAmount:Float = 0; //What opacity to tween to
+	var tweenTime:Float = 0; // How long said tween should take
+	var diceRoll:Int = 0;   // Must be 6 to tween.
+	var tweenTarget:Int = 0; // Which bg sprite gets tweened
+
+	//BACKGROUND FUCKERY
+	public function tweenBackground(){
+		diceRoll = FlxG.random.int(1,6);
+		if (diceRoll != 6) {return;}
+		else{
+				tweenTarget = FlxG.random.int(1,3); //indexing from 1 >>>:DDDDDD
+				tweenTime = FlxG.random.float(0.5,5);
+				tweenAmount = FlxG.random.float(0,1);
+
+				switch(tweenTarget){
+					case 1: //Topaz
+					FlxTween.tween(topazback, {alpha: tweenAmount}, tweenTime);
+					case 2: //Halfway
+					FlxTween.tween(halfwayback, {alpha: tweenAmount}, tweenTime);
+					case 3: //Mimic
+					FlxTween.tween(mimicback, {alpha: tweenAmount}, tweenTime);
+					default:
+					trace( 'tweenBackground default case triggered. There might be a bug in the code.');
+				}
+			}
+		return;
+	}
+
 	override public function update(elapsed:Float)
 	{
+
+
 		/*if (FlxG.keys.justPressed.NINE)
 		{
 			iconP1.swapOldIcon();
@@ -3836,6 +3904,8 @@ class PlayState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
+
+		tweenBackground();
 
 		if(lastBeatHit >= curBeat) {
 			//trace('BEAT HIT: ' + curBeat + ', LAST HIT: ' + lastBeatHit);

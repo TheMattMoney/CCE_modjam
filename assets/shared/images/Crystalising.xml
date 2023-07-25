@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Crystalising.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Crystalising0000" x="10" y="10" width="1407" height="795"/>
+	<SubTexture name="Crystalising0001" x="1427" y="10" width="1407" height="795"/>
+	<SubTexture name="Crystalising0002" x="2844" y="10" width="1407" height="795"/>
+	<SubTexture name="Crystalising0003" x="4261" y="10" width="1407" height="795"/>
+	<SubTexture name="Crystalising0004" x="5678" y="10" width="1407" height="795"/>
+	<SubTexture name="Crystalising0005" x="10" y="815" width="1407" height="795"/>
+	<SubTexture name="Crystalising0006" x="1427" y="815" width="1407" height="795"/>
+	<SubTexture name="Crystalising0007" x="2844" y="815" width="1407" height="795"/>
+	<SubTexture name="Crystalising0008" x="4261" y="815" width="1407" height="795"/>
+	<SubTexture name="Crystalising0009" x="5678" y="815" width="1407" height="795"/>
+	<SubTexture name="Crystalising0010" x="10" y="1620" width="1407" height="795"/>
+	<SubTexture name="Crystalising0011" x="1427" y="1620" width="1407" height="795"/>
+	<SubTexture name="Crystalising0012" x="2844" y="1620" width="1407" height="795"/>
+	<SubTexture name="Crystalising0013" x="4261" y="1620" width="1407" height="795"/>
+	<SubTexture name="Crystalising0014" x="5678" y="1620" width="1407" height="795"/>
+	<SubTexture name="Crystalising0015" x="10" y="2425" width="1407" height="795"/>
+</TextureAtlas>

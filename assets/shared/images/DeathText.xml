@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="DeathText.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="DeathFadeFull0000" x="10" y="10" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0001" x="1146" y="10" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0002" x="2282" y="10" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0003" x="3418" y="10" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0004" x="4554" y="10" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0005" x="5690" y="10" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0006" x="6826" y="10" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0007" x="10" y="434" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0008" x="1146" y="434" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0009" x="2282" y="434" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0010" x="3418" y="434" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0011" x="4554" y="434" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0012" x="5690" y="434" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0013" x="6826" y="434" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0014" x="10" y="858" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0015" x="1146" y="858" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0016" x="2282" y="858" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0017" x="3418" y="858" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0018" x="4554" y="858" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0019" x="5690" y="858" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0020" x="6826" y="858" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0021" x="10" y="1282" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0022" x="1146" y="1282" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0023" x="2282" y="1282" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0024" x="3418" y="1282" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0025" x="4554" y="1282" width="1126" height="414"/>
+	<SubTexture name="DeathFadeFull0026" x="5690" y="1282" width="1126" height="414"/>
+	<SubTexture name="RetryConfirm0000" x="6826" y="1282" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0001" x="10" y="1706" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0002" x="1124" y="1706" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0003" x="2238" y="1706" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0004" x="3352" y="1706" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0005" x="4466" y="1706" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0006" x="5580" y="1706" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0007" x="6694" y="1706" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0008" x="10" y="2118" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0009" x="1124" y="2118" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0010" x="2238" y="2118" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0011" x="3352" y="2118" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0012" x="4466" y="2118" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0013" x="5580" y="2118" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0014" x="6694" y="2118" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0015" x="10" y="2530" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0016" x="1124" y="2530" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0017" x="2238" y="2530" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0018" x="3352" y="2530" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0019" x="4466" y="2530" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0020" x="5580" y="2530" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0021" x="6694" y="2530" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0022" x="10" y="2942" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0023" x="1124" y="2942" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0024" x="2238" y="2942" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0025" x="3352" y="2942" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0026" x="4466" y="2942" width="1104" height="402"/>
+	<SubTexture name="RetryConfirm0027" x="5580" y="2942" width="1104" height="402"/>
+	<SubTexture name="Static0000" x="6694" y="2942" width="1127" height="403"/>
+</TextureAtlas>
