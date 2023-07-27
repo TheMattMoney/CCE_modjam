@@ -2642,6 +2642,12 @@ class PlayState extends MusicBeatState
 
 	public function triggerEventNote(eventName:String, value1:String, value2:String) {
 		switch(eventName) {
+			case 'Double Bump':
+				if(value1 == '1') {Conductor.bpm = Conductor.bpm * 2;}
+				if(value1 == '0') {Conductor.bpm = Conductor.bpm * (1/2);}
+				else {trace('Double Bump has an invalid value.');}
+			case 'Mimic Explosion':
+				FlxG.camera.fade(FlxColor.WHITE, 1, false);
 			case 'Dadbattle Spotlight':
 				var val:Null<Int> = Std.parseInt(value1);
 				if(val == null) val = 0;
