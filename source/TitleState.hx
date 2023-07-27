@@ -507,19 +507,19 @@ class TitleState extends MusicBeatState
 					FlxG.sound.playMusic(Paths.music('crystalMenu'), 0);
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 					ngSpr.visible = true;
-					FlxTween.tween(ngSpr, {alpha: 1}, 1, {ease: FlxEase.quadInOut});
+					FlxTween.tween(ngSpr, {alpha: 1}, 0.5, {ease: FlxEase.quadInOut});
 				case 2:
 				
 					
 					
 				case 4:
 					
-					FlxTween.tween(ngSpr, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
+					FlxTween.tween(ngSpr, {alpha: 0}, 0.5, {ease: FlxEase.quadInOut});
 				case 5:
-					ngSpr.visible = false;
+					
 				case 6:
 					
-
+					ngSpr.visible = false;
 					createCoolText(['Created for'], 15);
 					//////////////////
 				

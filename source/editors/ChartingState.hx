@@ -87,7 +87,7 @@ class ChartingState extends MusicBeatState
 	[
 		['', "Nothing. Yep, that's right."],
 		['Mimic Explosion', "Fades the screen to white."],
-		['Double Bump', "Doubles the speed of all bumpers by doubling the internal conductor BPM. \n Value One should be 1 to enable, 0 to disable."],
+		['Double Bump', "Doubles the speed of all bumpers by doubling the internal conductor BPM. \n Value One should be 1 to enable, 0 to disable. \n Note: This does not work lmao."],
 		['Dadbattle Spotlight', "Used in Dad Battle,\nValue 1: 0/1 = ON/OFF,\n2 = Target Dad\n3 = Target BF"],
 		['Hey!', "Plays the \"Hey!\" animation from Bopeebo,\nValue 1: BF = Only Boyfriend, GF = Only Girlfriend,\nSomething else = Both.\nValue 2: Custom animation duration,\nleave it blank for 0.6s"],
 		['Set GF Speed', "Sets GF head bopping speed,\nValue 1: 1 = Normal speed,\n2 = 1/2 speed, 4 = 1/4 speed etc.\nUsed on Fresh during the beatbox parts.\n\nWarning: Value must be integer!"],
