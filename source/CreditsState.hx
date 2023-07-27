@@ -87,7 +87,7 @@ class CreditsState extends MusicBeatState
 			['Dismissor',				'dismissor',		'Animator/ Main Sprite Artist',									'https://twitter.com/blankmissor',		'3300FF'],
 			['HPK',						'keyz',				'Noteskin Artist',															'https://twitter.com/highpoweredart',	'B81100'],
 			['Jorge-Sunspirit',			'jorge',			'Assistant Programmer',														'https://twitter.com/jorge_sunspirit',	'5EB38C'],
-			['Sykley',					'sykley',		'Topaz VA #2',													'https://twitter.com/SykleyShbang',		'33FFFF'],
+			['Sykley',					'sykley',		'Topaz VA #2',													'https://twitter.com/SykleyShbang',		'C6DEFF'],
 			['Kairii',					'ryota',			'Graphic Designer',															'https://riistudios.com',				'DE3163'],
 			[''],
 			['Psych Engine Team'],
